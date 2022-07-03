@@ -1,0 +1,1 @@
+This is a practice project to create a library management system.
