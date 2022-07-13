@@ -7,7 +7,7 @@ def Admin(edited_books):
         book=input("Enter the book name \n")
         book=book.lower()
         edited_books.append(book)
-        again=int(input("To add more books press 1 /n To exit press 2 /n "))
+        again=int(input("To add more books press 1 \n To exit press 2 \n "))
         if again != 1:
             break
     return(edited_books)
