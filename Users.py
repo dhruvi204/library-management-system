@@ -1,4 +1,5 @@
 import Borrow
+import Return
 def Users(book_display):
  User_info={}
  while True:
@@ -14,9 +15,14 @@ def Users(book_display):
         temp_name=input("enter name \n")
         temp_pwd=int(input("enter pin \n"))
         if (temp_name,temp_pwd) in User_info.items():
-            Borrow.Borrow(book_display)
+            Borrow_Or_Return = int(input("Press 1 to borrow books \n Press 2 to return books \n"))
+            if Borrow_Or_Return==1:
+                Missing_Books=Borrow.Borrow(book_display)
+            if Borrow_Or_Return==2:
+                book_display.append(Return.Return(Missing_Books))
+                
         else:
-            print("Invalid, ID does not match password")
+           print("Invalid, ID does not match password")
 
      
         
